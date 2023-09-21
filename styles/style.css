@@ -1,0 +1,195 @@
+body{
+   background-color: rgb(255,255,255);
+   
+}
+
+.header-style{
+    text-align: center;
+    font-family: "Poppins",sans-serif;
+   font-size: 20px;
+    background-color: white;
+    color: black;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    top: 15px;
+    border-bottom: 3px solid #f8c4a1;
+
+}
+
+.grid-container {
+    margin-top: 50px;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr); /* Two columns */
+   grid-gap: 15px; /* Margin on all sides */
+ }
+ 
+ .input-data-div {
+    height: 800px;
+   display: grid;
+   border-radius: 15px;
+   border-style: solid;
+   border-width: 1px;
+   border-color: grey;
+   box-shadow: 1px 1px 8px black ;
+   border-top: 5px solid #2a64ad;
+
+    
+ }
+ .enter-detail{
+   font-family: "Poppins",sans-serif;
+   font-size: 20px;
+   padding: 5px;
+   border-radius: 5px;
+   border-bottom: 1px solid #2a64ad;
+   text-align: center;
+ }
+ .input-data-div-grid{
+    height: 600px;
+    width: 900px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+   
+ }
+ input:focus, textarea:focus, select:focus{
+   outline: none;
+}
+ .div2 {
+   height: 900px;
+ /* Red color */
+  border-radius: 15px;
+   border-style: solid;
+   border-width: 1px;
+   border-color: grey;
+   box-shadow: 1px 1px 8px grey ;
+   overflow: scroll;
+   border-top: 5px solid black;
+   
+ }
+ .input-text ,.text-area-input {
+    height: 30px;
+    margin: 5px;
+    width: 350px;
+    border: 1px solid rgb(222,227,238);
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px black ;
+ }
+ .text-area-input{
+    resize: none;
+    height: 100px;
+    width: 350px;
+ }
+ textarea[placeholder]
+{
+    text-align: center;
+}
+ 
+ .label-element{
+    height: 10px;
+ }
+ .input-align-data{
+    display: grid;
+    grid-template-rows: auto;
+    place-content: center;
+ }
+ .input-align-data-div{
+ display: grid;
+ grid-gap: 5px;
+ font-family: "Poppins",sans-serif;
+ font-size: 15px;
+ font-weight: 400;
+ text-shadow: 5px;
+ box-shadow: 15px;
+ }
+ .upload-button{
+   background-color: white;
+   color: rgb(34, 36, 41);
+   height: 50px;
+   width: 100px;
+   border-radius: 25px;
+   border-color: rgb(5, 9, 26);
+   box-shadow: 1px 1px 15px black ;
+   font-family: "Poppins",sans-serif;
+   cursor: pointer;
+ }
+ .upload-button-div{
+   display: grid;
+   place-content: center;
+ }
+ .edit-button{
+   background-color: white;
+   color: rgb(34, 36, 41);
+   height: 20px;
+   width: 40px;
+   border-radius: 25px;
+   border-color: rgb(5, 9, 26);
+   box-shadow: 1px 1px 8px black ;
+   cursor: pointer;
+ }
+
+ .input-text-element{
+   border-bottom: 1px solid rgb(222,227,238);
+   padding: 5px;
+   border-radius: 5px;
+ }
+ .pdf-content-div{
+ width: 800px;
+ margin-left: 60px;
+ }
+ .div2::-webkit-scrollbar {
+   width: 1px;
+ }
+  
+
+ body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#showToast {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* ... Previous CSS code ... */
+
+#toastContainer {
+  position: fixed;
+  top: 20px; /* Updated to position at the top */
+  right: 20px; /* Position at the right */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.toast {
+  background-color: red;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  margin: 10px 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  max-width: 300px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  /* Additional styles to position at the top-right corner */
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  font-weight: bold;
+}
