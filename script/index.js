@@ -1,5 +1,272 @@
-function upload(){
 
+function upload() {
+    const titleToFunction = {
+        "Damage Not relavant - partial": damagesNotRelevantPartial,
+        "Damage Not relavant - full": damagesNotRelevantFull,
+        "Loss details not in policy period": LossDetailsNotInPolicyPeriod,
+        "NCB Wrong Declaration": NcbWrongDeclaration,
+        "Pre-exisiting previous claim - partial": PreExisitingPreviousClaimPartial,
+        "Pre-exisiting previous claim - full": PreExisitingPreviousClaimFull,
+        "Driver Clause": driverClase,
+        "VIR fraud - misrepresention of vir" : VirfraudMisReresentionOfVir ,
+        "VIR pre-existing Full" :VirPreExistingFull ,
+        "VIR pre-existing - Partial" : VirPreExistingPartial
+    };
+
+    const currentTitle = document.title;
+    const selectedFunction = titleToFunction[currentTitle];
+
+    if (selectedFunction) {
+        selectedFunction();
+    }
+}
+
+/*function upload(){
+
+    function dataMapping() {
+    
+        if (document.title === "Damage Not relavant - partial") {
+            damagesNotRelevantPartial() ; // Call function1 for the first HTML file
+        } else if (document.title === "Damage Not relavant - full") {
+            damagesNotRelevantFull(); // Call function2 for the second HTML file
+        }else if (document.title === "Loss details not in policy period") {
+            LossDetailsNotInPolicyPeriod(); // Call function3 for the second HTML file
+         }else if (document.title === "NCB Wrong Declaration") {
+            NcbWrongDeclaration(); // Call function4 for the second HTML file
+         }else if (document.title === "Pre-exisiting previous claim - partial") {
+            PreExisitingPreviousClaimPartial(); // Call function5 for the second HTML file
+         }
+    };
+    dataMapping(); 
+}*/
+    // Function for the second HTML file
+ function damagesNotRelevantFull() {
+    // Create an array to store the values of the input boxes
+    const inputs = [];
+    
+
+    // Loop through each input box and get its value
+    for (let i = 1; i <= 9; i++) {
+        // Get the value of each input and remove any extra spaces
+        const input = document.getElementById(`textInput${i}`);
+        const inputValue = input.value.trim();
+
+        if (inputValue !== "") {
+            input.classList.remove("invalid-input");
+            input.classList.add("valid-input");
+        } else {
+            input.classList.remove("valid-input");
+            input.classList.add("invalid-input");
+        }
+        // Add the value to the 'inputs' array
+        inputs.push(inputValue);
+    }  // Check if all input boxes have values
+    if (inputs.every(input => input !== "")) {
+        // If they all have values, display "Okay" in green
+        document.getElementById('toastMessage').style.backgroundColor =  "Green";
+        showToast(`Document Updated`);
+       
+    } else {
+        // If any input is empty, display "Not Okay" in red
+        colorChanger();
+        showToast("Enter Details");
+        
+    }
+
+   const inputData = [
+       'textInput1', 'textInput2', 'textInput3', 'textInput4',
+       'textInput5', 'textInput6', 'textInput7', 'textInput8' , 'textInput9'
+    // Repeated field
+   ];
+
+   inputData.forEach((inputId, index) => {
+       const inputElement = document.getElementById(inputId);
+       const dataMapElement = document.getElementById(`Data-map-${index}`);
+       const value = inputElement.value.replace(/\n/g, "<br>").replace(/ /g, "&nbsp;");
+       dataMapElement.innerHTML = value;
+   });
+
+   
+   function colorChanger(){
+       document.getElementById('toastMessage').style.backgroundColor =  "Red";
+   }
+  
+}
+
+
+    // Function for the first HTML file
+     function damagesNotRelevantPartial() {
+        // Create an array to store the values of the input boxes
+        const inputs = [];
+   
+        // Loop through each input box and get its value
+        for (let i = 1; i <= 10; i++) {
+            // Get the value of each input and remove any extra spaces
+            const input = document.getElementById(`textInput${i}`);
+            const inputValue = input.value.trim();
+    
+            if (inputValue !== "") {
+                input.classList.remove("invalid-input");
+                input.classList.add("valid-input");
+            } else {
+                input.classList.remove("valid-input");
+                input.classList.add("invalid-input");
+            }
+            // Add the value to the 'inputs' array
+            inputs.push(inputValue);
+        }  // Check if all input boxes have values
+        if (inputs.every(input => input !== "")) {
+            // If they all have values, display "Okay" in green
+            document.getElementById('toastMessage').style.backgroundColor =  "Green";
+            showToast(`Document Updated`);
+          
+        } else {
+            // If any input is empty, display "Not Okay" in red
+            colorChanger();
+            showToast("Enter Details");
+            
+        }
+       
+       const inputData = [
+           'textInput1',  'textInput2', 'textInput3', 'textInput4',
+           'textInput5', 'textInput6', 'textInput8', 'textInput7',
+           'textInput9' , 'textInput8' , 'textInput10' // Repeated field
+       ];
+    
+       inputData.forEach((inputId, index) => {
+           const inputElement = document.getElementById(inputId);
+   
+           const dataMapElement = document.getElementById(`Data-map-${index}`);
+           const value = inputElement.value.replace(/\n/g, "<br>").replace(/ /g, "&nbsp;");
+           dataMapElement.innerHTML = value;
+       });
+   
+       
+       function colorChanger(){
+           document.getElementById('toastMessage').style.backgroundColor =  "Red";
+       }
+   
+   
+    }
+
+    // Function for the third HTML file
+     function driverClase() {
+        // Create an array to store the values of the input boxes
+        const inputs = [];
+   
+        // Loop through each input box and get its value
+        for (let i = 1; i <= 10; i++) {
+            // Get the value of each input and remove any extra spaces
+            const input = document.getElementById(`textInput${i}`);
+            const inputValue = input.value.trim();
+    
+            if (inputValue !== "") {
+                input.classList.remove("invalid-input");
+                input.classList.add("valid-input");
+            } else {
+                input.classList.remove("valid-input");
+                input.classList.add("invalid-input");
+            }
+            // Add the value to the 'inputs' array
+            inputs.push(inputValue);
+        }  // Check if all input boxes have values
+        if (inputs.every(input => input !== "")) {
+            // If they all have values, display "Okay" in green
+            document.getElementById('toastMessage').style.backgroundColor =  "Green";
+            showToast(`Document Updated`);
+          
+        } else {
+            // If any input is empty, display "Not Okay" in red
+            colorChanger();
+            showToast("Enter Details");
+            
+        }
+   
+   
+   
+       
+       const inputData = [
+           'textInput1',  'textInput2', 'textInput3', 'textInput4',
+           'textInput5', 'textInput6', 'textInput8', 'textInput7',
+           'textInput9' , 'textInput10' // Repeated field
+       ];
+    
+       inputData.forEach((inputId, index) => {
+           const inputElement = document.getElementById(inputId);
+   
+           const dataMapElement = document.getElementById(`Data-map-${index}`);
+           const value = inputElement.value.replace(/\n/g, "<br>").replace(/ /g, "&nbsp;");
+           dataMapElement.innerHTML = value;
+       });
+   
+       
+       function colorChanger(){
+           document.getElementById('toastMessage').style.backgroundColor =  "Red";
+       }
+   
+   
+    }
+
+ // Function for the foruth HTML file
+ function LossDetailsNotInPolicyPeriod() {
+    // Create an array to store the values of the input boxes
+    const inputs = [];
+
+    // Loop through each input box and get its value
+    for (let i = 1; i <= 6; i++) {
+        // Get the value of each input and remove any extra spaces
+        const input = document.getElementById(`textInput${i}`);
+        const inputValue = input.value.trim();
+
+        if (inputValue !== "") {
+            input.classList.remove("invalid-input");
+            input.classList.add("valid-input");
+        } else {
+            input.classList.remove("valid-input");
+            input.classList.add("invalid-input");
+        }
+        // Add the value to the 'inputs' array
+        inputs.push(inputValue);
+    }  // Check if all input boxes have values
+    if (inputs.every(input => input !== "")) {
+        // If they all have values, display "Okay" in green
+        document.getElementById('toastMessage').style.backgroundColor =  "Green";
+        showToast(`Document Updated`);
+      
+    } else {
+        // If any input is empty, display "Not Okay" in red
+        colorChanger();
+        showToast("Enter Details");
+        
+    }
+
+
+
+   
+   const inputData = [
+       'textInput1',  'textInput2', 'textInput3', 'textInput4',
+       'textInput5', ,'textInput5' ,'textInput6'  // Repeated field
+   ];
+
+   inputData.forEach((inputId, index) => {
+       const inputElement = document.getElementById(inputId);
+
+       const dataMapElement = document.getElementById(`Data-map-${index}`);
+       const value = inputElement.value.replace(/\n/g, "<br>").replace(/ /g, "&nbsp;");
+       dataMapElement.innerHTML = value;
+   });
+
+   
+   function colorChanger(){
+       document.getElementById('toastMessage').style.backgroundColor =  "Red";
+   }
+
+
+}
+
+
+// Function for the fifth HTML file
+function NcbWrongDeclaration() {
     // Create an array to store the values of the input boxes
     const inputs = [];
 
@@ -18,85 +285,363 @@ function upload(){
         }
         // Add the value to the 'inputs' array
         inputs.push(inputValue);
+    }  // Check if all input boxes have values
+    if (inputs.every(input => input !== "")) {
+        // If they all have values, display "Okay" in green
+        document.getElementById('toastMessage').style.backgroundColor =  "Green";
+        showToast(`Document Updated`);
+      
+    } else {
+        // If any input is empty, display "Not Okay" in red
+        colorChanger();
+        showToast("Enter Details");
+        
     }
 
-    dataMapping();
-        // Check if all input boxes have values
+
+
+   
+   const inputData = [
+       'textInput1',  'textInput2', 'textInput3', 'textInput4',
+       'textInput5', 'textInput6' ,'textInput7', 'textInput8',
+       'textInput9', 
+   
+       // Repeated field
+   ];
+
+   inputData.forEach((inputId, index) => {
+       const inputElement = document.getElementById(inputId);
+
+       const dataMapElement = document.getElementById(`Data-map-${index}`);
+       const value = inputElement.value.replace(/\n/g, "<br>").replace(/ /g, "&nbsp;");
+       dataMapElement.innerHTML = value;
+   });
+
+   
+   function colorChanger(){
+       document.getElementById('toastMessage').style.backgroundColor =  "Red";
+   }
+
+
+}
+
+
+function PreExisitingPreviousClaimPartial() {
+    // Create an array to store the values of the input boxes
+    const inputs = [];
+
+    // Loop through each input box and get its value
+    for (let i = 1; i <= 7; i++) {
+        // Get the value of each input and remove any extra spaces
+        const input = document.getElementById(`textInput${i}`);
+        const inputValue = input.value.trim();
+
+        if (inputValue !== "") {
+            input.classList.remove("invalid-input");
+            input.classList.add("valid-input");
+        } else {
+            input.classList.remove("valid-input");
+            input.classList.add("invalid-input");
+        }
+        // Add the value to the 'inputs' array
+        inputs.push(inputValue);
+    }  // Check if all input boxes have values
+    if (inputs.every(input => input !== "")) {
+        // If they all have values, display "Okay" in green
+        document.getElementById('toastMessage').style.backgroundColor =  "Green";
+        showToast(`Document Updated`);
+      
+    } else {
+        // If any input is empty, display "Not Okay" in red
+        colorChanger();
+        showToast("Enter Details");
+        
+    }
+
+
+
+   
+   const inputData = [
+       'textInput1',  'textInput2', 'textInput3', 'textInput4',
+       'textInput5', 'textInput6' ,'textInput6','textInput5',
+       'textInput2','textInput7'
+   
+       // Repeated field
+   ];
+
+   inputData.forEach((inputId, index) => {
+       const inputElement = document.getElementById(inputId);
+
+       const dataMapElement = document.getElementById(`Data-map-${index}`);
+       const value = inputElement.value.replace(/\n/g, "<br>").replace(/ /g, "&nbsp;");
+       dataMapElement.innerHTML = value;
+   });
+
+   
+   function colorChanger(){
+       document.getElementById('toastMessage').style.backgroundColor =  "Red";
+   }
+
+
+}
+
+function PreExisitingPreviousClaimFull() {
+    // Create an array to store the values of the input boxes
+    const inputs = [];
+
+    // Loop through each input box and get its value
+    for (let i = 1; i <= 6; i++) {
+        // Get the value of each input and remove any extra spaces
+        const input = document.getElementById(`textInput${i}`);
+        const inputValue = input.value.trim();
+
+        if (inputValue !== "") {
+            input.classList.remove("invalid-input");
+            input.classList.add("valid-input");
+        } else {
+            input.classList.remove("valid-input");
+            input.classList.add("invalid-input");
+        }
+        // Add the value to the 'inputs' array
+        inputs.push(inputValue);
+    }  // Check if all input boxes have values
+    if (inputs.every(input => input !== "")) {
+        // If they all have values, display "Okay" in green
+        document.getElementById('toastMessage').style.backgroundColor =  "Green";
+        showToast(`Document Updated`);
+      
+    } else {
+        // If any input is empty, display "Not Okay" in red
+        colorChanger();
+        showToast("Enter Details");
+        
+    }
+
+
+
+   
+   const inputData = [
+       'textInput1',  'textInput2', 'textInput3', 'textInput4',
+       'textInput5', 'textInput6' ,'textInput6','textInput5',
+       'textInput2'
+   
+       // Repeated field
+   ];
+
+   inputData.forEach((inputId, index) => {
+       const inputElement = document.getElementById(inputId);
+
+       const dataMapElement = document.getElementById(`Data-map-${index}`);
+       const value = inputElement.value.replace(/\n/g, "<br>").replace(/ /g, "&nbsp;");
+       dataMapElement.innerHTML = value;
+   });
+
+   
+   function colorChanger(){
+       document.getElementById('toastMessage').style.backgroundColor =  "Red";
+   }
+
+
+}
+
+function VirfraudMisReresentionOfVir() {
+    // Create an array to store the values of the input boxes
+    const inputs = [];
+
+    // Loop through each input box and get its value
+    for (let i = 1; i <= 5; i++) {
+        // Get the value of each input and remove any extra spaces
+        const input = document.getElementById(`textInput${i}`);
+        const inputValue = input.value.trim();
+
+        if (inputValue !== "") {
+            input.classList.remove("invalid-input");
+            input.classList.add("valid-input");
+        } else {
+            input.classList.remove("valid-input");
+            input.classList.add("invalid-input");
+        }
+        // Add the value to the 'inputs' array
+        inputs.push(inputValue);
+    }  // Check if all input boxes have values
+    if (inputs.every(input => input !== "")) {
+        // If they all have values, display "Okay" in green
+        document.getElementById('toastMessage').style.backgroundColor =  "Green";
+        showToast(`Document Updated`);
+      
+    } else {
+        // If any input is empty, display "Not Okay" in red
+        colorChanger();
+        showToast("Enter Details");
+        
+    }
+
+
+
+   
+   const inputData = [
+       'textInput1',  'textInput2', 'textInput3', 'textInput4',
+       'textInput5'
+   
+       // Repeated field
+   ];
+
+   inputData.forEach((inputId, index) => {
+       const inputElement = document.getElementById(inputId);
+
+       const dataMapElement = document.getElementById(`Data-map-${index}`);
+       const value = inputElement.value.replace(/\n/g, "<br>").replace(/ /g, "&nbsp;");
+       dataMapElement.innerHTML = value;
+   });
+
+   
+   function colorChanger(){
+       document.getElementById('toastMessage').style.backgroundColor =  "Red";
+   }
+
+
+}
+
+
+
+
+function VirPreExistingFull() {
+    // Create an array to store the values of the input boxes
+    const inputs = [];
+
+    // Loop through each input box and get its value
+    for (let i = 1; i <= 5; i++) {
+        // Get the value of each input and remove any extra spaces
+        const input = document.getElementById(`textInput${i}`);
+        const inputValue = input.value.trim();
+
+        if (inputValue !== "") {
+            input.classList.remove("invalid-input");
+            input.classList.add("valid-input");
+        } else {
+            input.classList.remove("valid-input");
+            input.classList.add("invalid-input");
+        }
+        // Add the value to the 'inputs' array
+        inputs.push(inputValue);
+    }  // Check if all input boxes have values
+    if (inputs.every(input => input !== "")) {
+        // If they all have values, display "Okay" in green
+        document.getElementById('toastMessage').style.backgroundColor =  "Green";
+        showToast(`Document Updated`);
+      
+    } else {
+        // If any input is empty, display "Not Okay" in red
+        colorChanger();
+        showToast("Enter Details");
+        
+    }
+}
+    
+    function VirPreExistingPartial() {
+        // Create an array to store the values of the input boxes
+        const inputs = [];
+    
+        // Loop through each input box and get its value
+        for (let i = 1; i <= 6; i++) {
+            // Get the value of each input and remove any extra spaces
+            const input = document.getElementById(`textInput${i}`);
+            const inputValue = input.value.trim();
+    
+            if (inputValue !== "") {
+                input.classList.remove("invalid-input");
+                input.classList.add("valid-input");
+            } else {
+                input.classList.remove("valid-input");
+                input.classList.add("invalid-input");
+            }
+            // Add the value to the 'inputs' array
+            inputs.push(inputValue);
+        }  // Check if all input boxes have values
         if (inputs.every(input => input !== "")) {
             // If they all have values, display "Okay" in green
             document.getElementById('toastMessage').style.backgroundColor =  "Green";
             showToast(`Document Updated`);
-            inputDeactivate();
+          
         } else {
             // If any input is empty, display "Not Okay" in red
             colorChanger();
             showToast("Enter Details");
             
         }
-  
-    };
+
+   
+   const inputData = [
+       'textInput1',  'textInput2', 'textInput3', 'textInput4',
+       'textInput5' ,'textInput6' , 'textInput5' , 'textInput6'
+   
+       // Repeated field
+   ];
+
+   inputData.forEach((inputId, index) => {
+       const inputElement = document.getElementById(inputId);
+
+       const dataMapElement = document.getElementById(`Data-map-${index}`);
+       const value = inputElement.value.replace(/\n/g, "<br>").replace(/ /g, "&nbsp;");
+       dataMapElement.innerHTML = value;
+   });
+
+   
+   function colorChanger(){
+       document.getElementById('toastMessage').style.backgroundColor =  "Red";
+   }
 
 
-    function dataMapping(){
-const textArea =  document.getElementById('textInput1').value.replace(/\n/g, "<br>").replace(/ /g, "&nbsp;");
-const vehicleNumber = document.getElementById('textInput2').value;
-const policyNumber = document.getElementById('textInput3').value;
-const dateOfLoss = document.getElementById('textInput4').value;
-const reason = document.getElementById('textInput5').value;
-const serviceName = document.getElementById('textInput6').value;
-const observedDamage = document.getElementById('textInput8').value;
-const inspectedDate = document.getElementById('textInput7').value;
-const causeOfLoss = document.getElementById('textInput9').value.replace(/\n/g, "<br>").replace(/ /g, "&nbsp;");
-
-console.log(reason);
-document.getElementById('Data-map-0').innerHTML = textArea;
-document.getElementById('Data-map-1').innerHTML = policyNumber;
-document.getElementById('Data-map-2').innerHTML = vehicleNumber;
-document.getElementById('Data-map-3').innerHTML = dateOfLoss;
-document.getElementById('Data-map-4').innerHTML = reason;
-document.getElementById('Data-map-5').innerHTML = serviceName;
-document.getElementById('Data-map-6').innerHTML = observedDamage;
-document.getElementById('Data-map-7').innerHTML = inspectedDate;
-document.getElementById('Data-map-8').innerHTML = causeOfLoss;
-document.getElementById('Data-map-9').innerHTML = observedDamage;
-
-}
-
-function inputDeactivate(){
-    textArea.style.borderColor =  "rgb(222,227,238)";
-}
-
-function colorChanger(){
-    document.getElementById('toastMessage').style.backgroundColor =  "Red";
-}
-const editableContent = document.getElementById("edit-pdf");
-const toggleButton = document.getElementById("toggleButton");
-
-function toggleContentEditable(){
-if (editableContent.contentEditable === "true") {
-    editableContent.contentEditable = "false";
-    toggleButton.textContent = "Edit";
-    toggleButton.style.backgroundColor =  "White"
-} else {
-    editableContent.contentEditable = "true";
-    toggleButton.textContent = "Edit";
-    toggleButton.style.backgroundColor =  "Green"
-}
-}
-toggleButton.addEventListener("click",  toggleContentEditable);
-function showToast(message) {
-
-toastMessage.textContent = message;
-toastMessage.style.opacity = 1;
-
-setTimeout(() => {
-    toastMessage.style.opacity = 0;
-}, 3000); // 3000 milliseconds (3 seconds) for the toast to disappear
 }
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+ /* Default functions*/  
+
+ const editableContent = document.getElementById("edit-pdf");
+    const toggleButton = document.getElementById("toggleButton");
+    
+    function toggleContentEditable(){
+    if (editableContent.contentEditable === "true") {
+        editableContent.contentEditable = "false";
+        toggleButton.textContent = "Edit";
+        toggleButton.style.backgroundColor =  "White"
+    } else {
+        editableContent.contentEditable = "true";
+        toggleButton.textContent = "Edit";
+        toggleButton.style.backgroundColor =  "Green"
+    }
+    }
+    toggleButton.addEventListener("click",  toggleContentEditable);
+    function showToast(message) {
+    
+    toastMessage.textContent = message;
+    toastMessage.style.opacity = 1;
+    
+    setTimeout(() => {
+        toastMessage.style.opacity = 0;
+    }, 3000); // 3000 milliseconds (3 seconds) for the toast to disappear
+    }
+    
+
+
+ function reload(){
+    location.reload();
+    upload();
+    toggleContentEditable();
+}
 function getPrint(){
     const printContents = document.getElementById('edit-pdf').innerHTML;
     const originalContents = document.body.innerHTML;
@@ -107,12 +652,7 @@ function getPrint(){
     document.body.innerHTML = originalContents;
 
 }
-function reload(){
-    location.reload();
-    upload();
-    toggleContentEditable();
-}
-   
+
 function getCurrentDate() {
     const currentDate = new Date();
     const day = String(currentDate.getDate()).padStart(2, '0');
@@ -124,5 +664,5 @@ function getCurrentDate() {
 
 const formattedDate = getCurrentDate();
 document.querySelector('.currentDate').innerHTML = formattedDate;         
-console.log(formattedDate); // Output: "14-09-2023" (for September 14, 2023)
+ // Output: "14-09-2023" (for September 14, 2023)
          
