@@ -3,63 +3,214 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document Project V1.0</title>
+    <link rel="icon" href="pdf-document-2613.svg">
+ 
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:ital,wght@0,500;1,300;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
       body{
-         background-color: rgb(228,184,196);
+      
+         background:linear-gradient(53deg, rgba(73,108,120,0.8995973389355743) 1%, rgba(74,203,245,0.958420868347339) 94%);;
+         font-family: 'Montserrat', sans-serif;
       }
      .preview-box{
-      height: 170px;
-      width: 130px;
-      border-radius: 10px;
-      border: solid 2px  gray;
+      height: 90px;
+      width: 250px;
+      border-radius: 2px;
+      box-shadow: 1px 1px 5px black ;
      }
 
      .selecting-content{
-      height: 700px;
+      height: 500px;
       background-color: white;
       width: 1000px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+      margin: 50px;
+      border-radius: 10px;
      }
+     .centering-content{
+      display: grid;
+      place-items: center;
+      height: 90vh;
+      border-radius: 50px;
+      box-shadow: 1px 1px 8px black ;
+     }
+     .design-content{
+      border-radius: 15px;
+      background-color: white;
+      box-shadow: 1px 15px 50px black ;
+     }
+
+     .img-logo{
+      height: 50px;
+      background-color: white;
+     }
+     .preview-box{
+      background-color: white;
+      align-items: center;
+      border: none;
+     }
+     .document-name{
+      margin-top: 10px;
+      word-wrap: break-word;
+      font-family: 'Montserrat', sans-serif;
+     }
+     .header-document{
+      width: 500px;
+      padding-left: 50px;
+      font-size: 15px;
+      font-weight: 500;
+      padding-top: 15px;
+     }
+     .header-document1{
+      color: grey;   
+      margin-top: -10px;
+      width: 500px;
+      padding-left: 50px;
+      font-size: 15px;
+     }
+    
     </style>
 </head>
 <body>
+   <div class="centering-content">
+      <div class="design-content"> 
+         <div class="header-document"><h2 >Select Document</h2></div>
+         <h4 class="header-document1">Click the buttton to open the page</h4>
     <div class="selecting-content">
+    
       <div class="selecting-div">
-         <div class="preview-box"></div>
-         <a href="All html/NCB wrong declration.html">NCB wrong declration</a>   
-      </div>
-      <div class="selecting-div">
-         <div class="preview-box"></div>
-       <a href="All html/Loss details not in policy period.html">Loss details not in policy period</a>  
-      </div>
-      <div class="selecting-div">
-         <div class="preview-box"></div>
-       <a href="All html/VIR fraud - misrepresention of vir.html"> VIR fraud - misrepresention of vir</a> 
-      </div>
-      <div class="selecting-div">
-         <div class="preview-box"></div>
-         <a href="All html/Damage not relavant - partial.html">Damage not relavant - partial</a>
+         <div>
+               <div  class="button-alignments" >  
+                  <button onclick="select('NCB Wrong Declaration')" class="preview-box" >
+                     <div><img class="img-logo" src="doc-1513.svg" alt="document"></div>
+                              <div class="document-name">NCB Wrong Declaration</div> 
+                     </button>
+                  </div>            
+               </div>
       </div>
       <div class="selecting-div">
-         <div class="preview-box"></div>
-         <a href="All html/Damages not relevant full.html">Damages not relevant full</a>
+         <div>
+               <div  class="button-alignments" >  
+                  <button onclick="select('Loss details not in policy period')" class="preview-box" >
+                     <div><img class="img-logo" src="doc-1513.svg" alt="document"></div>
+                              <div class="document-name">Loss details not in policy period</div> 
+                     </button>
+                  </div>            
+               </div>
       </div>
       <div class="selecting-div">
-         <div class="preview-box"></div>
-          <a href="All html/pre-exisiting previous claim full.html">pre-exisiting previous claim full</a> 
+         <div>
+               <div  class="button-alignments" >  
+                  <button onclick="select('VIR fraud - misrepresention of vir')" class="preview-box" >
+                     <div><img class="img-logo" src="doc-1513.svg" alt="document"></div>
+                              <div class="document-name">VIR fraud - misrepresention of vir</div> 
+                     </button>
+                  </div>            
+               </div>
       </div>
       <div class="selecting-div">
-         <div class="preview-box"></div>
-         <a href="All html/pre-exisiting previous claim - partial.html">pre-exisiting previous claim - partial</a>
+         <div>
+               <div  class="button-alignments" >  
+                  <button onclick="select('Damage not relavant - partial')" class="preview-box" >
+                     <div><img class="img-logo" src="doc-1513.svg" alt="document"></div>
+                              <div class="document-name">Damage not relavant - partial</div> 
+                     </button>
+                  </div>            
+               </div>
       </div>
       <div class="selecting-div">
-         <div class="preview-box"></div>
-        <a href="All html/VIR pre-existing - partial.html">VIR pre-existing - partial</a> 
+         <div>
+               <div  class="button-alignments" >  
+                  <button onclick="select('Damages not relevant full')" class="preview-box" >
+                     <div><img class="img-logo" src="doc-1513.svg" alt="document"></div>
+                              <div class="document-name">Damages not relevant full</div> 
+                     </button>
+                  </div>            
+               </div>
       </div>
+      <div class="selecting-div">
+         <div>
+               <div  class="button-alignments" >  
+                  <button onclick="select('pre-exisiting previous claim full')" class="preview-box" >
+                     <div><img class="img-logo" src="doc-1513.svg" alt="document"></div>
+                              <div class="document-name">pre-exisiting previous claim full</div> 
+                     </button>
+                  </div>            
+               </div>
       </div>
-
+      <div class="selecting-div">
+         <div>
+               <div  class="button-alignments" >  
+                  <button onclick="select('VIR pre-existing - partial')" class="preview-box" >
+                     <div><img class="img-logo" src="doc-1513.svg" alt="document"></div>
+                              <div class="document-name">VIR pre-existing - partial</div> 
+                     </button>
+                  </div>            
+               </div>
+      </div>
+      <div class="selecting-div">
+         <div>
+               <div  class="button-alignments" >  
+                  <button onclick="select('pre-exisiting previous claim - partial')" class="preview-box" >
+                     <div><img class="img-logo" src="doc-1513.svg" alt="document"></div>
+                              <div class="document-name">pre-exisiting previous claim - partial</div> 
+                     </button>
+                  </div>            
+               </div>
+       </div>
+   
+   </div>
+</div>
 </body>
+<script>
+   function select(content) {
+    const fileMapping = {
+        "NCB Wrong Declaration": "All html/NCB wrong declration.html",
+        "Loss details not in policy period": "All html/Loss details not in policy period.html",
+        "Damages not relevant full": "All html/Damages not relevant full.html",
+        "pre-exisiting previous claim full": "All html/pre-exisiting previous claim full.html",
+        "pre-exisiting previous claim - partial": "All html/pre-exisiting previous claim - partial.html",
+        "VIR pre-existing - partial": "All html/VIR pre-existing - partial.html",
+        "Damage not relavant - partial": "All html/Damage not relavant - partial.html",
+        "VIR fraud - misrepresention of vir": "All html/VIR fraud - misrepresention of vir.html"
+    };
 
+    const selectedFile = fileMapping[content];
+
+    if (selectedFile) {
+        window.open(selectedFile, "_blank");
+    }
+}
+
+/*   function select (){
+      const button = document.querySelector('.document-name').textContent;
+         if (button === "NCB Wrong Declaration"){ 
+            window.open("All html/NCB wrong declration.html", "_blank");
+         } else if (button === "Loss details not in policy period"){
+            window.open("All html/Loss details not in policy period.html", "_blank");
+       }else if (button === "Damages not relevant full"){
+            window.open("All html/Damages not relevant full.html", "_blank");
+         }else if (button === "pre-exisiting previous claim full"){
+            window.open("All html/pre-exisiting previous claim full.html", "_blank");
+         }else if (button === "pre-exisiting previous claim - partial"){
+            window.open("All html/pre-exisiting previous claim - partial.html", "_blank");
+         }else if (button === "VIR pre-existing - partial"){
+            window.open("All html/VIR pre-existing - partial.html", "_blank");
+         }
+         else if (button === "Damage not relavant - partial"){
+            window.open("All html/Damage not relavant - partial.html", "_blank");
+         }
+         else if (button === "VIR fraud - misrepresention of vir"){
+            window.open("All html/VIR fraud - misrepresention of vir.html", "_blank");
+         }
+
+   }*/
+
+
+</script>
 </html>
