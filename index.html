@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document Project V1.0</title>
+    <title>Letter Formats</title>
     <link rel="icon" href="pdf-document-2613.svg">
  
    
@@ -13,15 +13,20 @@
     <style>
       body{
       
-         background:linear-gradient(53deg, rgba(73,108,120,0.8995973389355743) 1%, rgba(74,203,245,0.958420868347339) 94%);;
+         background:linear-gradient(53deg, rgba(73,108,120,0.8995973389355743) 1%, rgba(74,203,245,0.958420868347339) 94%);
          font-family: 'Montserrat', sans-serif;
       }
      .preview-box{
       height: 90px;
       width: 250px;
       border-radius: 2px;
-      box-shadow: 1px 1px 5px black ;
+      box-shadow:  1px 1px 5px rgba(0, 0, 0, 0.3) ;
+      cursor: pointer;
+      transition: box-shadow 0.3s;
      }
+     .preview-box:hover {
+            box-shadow: 1px 1px 10px black; /* Add shadow on hover */
+        }
 
      .selecting-content{
       height: 500px;
@@ -35,7 +40,7 @@
      .centering-content{
       display: grid;
       place-items: center;
-      height: 90vh;
+      height: 98vh;
       border-radius: 50px;
       box-shadow: 1px 1px 8px black ;
      }
