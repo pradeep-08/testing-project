@@ -117,7 +117,7 @@ body{
  .div2 {
    height: 1100px;
  /* Red color */
-  border-radius: 15px;
+    border-radius: 15px;
    border-style: solid;
    border-width: 1px;
    border-color: grey;
@@ -127,6 +127,7 @@ body{
    background-color: white;
    
  }
+ 
  .input-text ,.text-area-input {
     height: 30px;
     margin: 5px;
@@ -196,7 +197,12 @@ body{
  width: 800px;
  margin-left: 50px;
  margin-right: 50px;
+  /* Adjust the blur intensity as needed */
 
+
+ }
+ #edit-pdf{
+  filter: blur(3px);
  }
  .div2::-webkit-scrollbar {
    width: 1px;

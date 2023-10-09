@@ -383,6 +383,11 @@ function PreExisitingPreviousClaimPartial() {
    }
 
 
+
+   
+
+ 
+
 }
 
 function PreExisitingPreviousClaimFull() {
@@ -440,6 +445,7 @@ function PreExisitingPreviousClaimFull() {
    function colorChanger(){
        document.getElementById('toastMessage').style.backgroundColor =  "Red";
    }
+
 
 
 }
@@ -596,18 +602,6 @@ function VirPreExistingFull() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
  /* Default functions*/  
 
  const editableContent = document.getElementById("edit-pdf");
@@ -618,10 +612,12 @@ function VirPreExistingFull() {
         editableContent.contentEditable = "false";
         toggleButton.textContent = "Edit";
         toggleButton.style.backgroundColor =  "White"
+      
     } else {
         editableContent.contentEditable = "true";
         toggleButton.textContent = "Edit";
         toggleButton.style.backgroundColor =  "Green"
+        editableContent.classList.remove('blurred');
     }
     }
     toggleButton.addEventListener("click",  toggleContentEditable);
@@ -665,4 +661,16 @@ function getCurrentDate() {
 const formattedDate = getCurrentDate();
 document.querySelector('.currentDate').innerHTML = formattedDate;         
  // Output: "14-09-2023" (for September 14, 2023)
-         
+
+
+ const changeButton = document.querySelector('.edit-button');
+ const blurredDiv = document.getElementById('edit-pdf');
+
+ // Add a click event listener to the button
+ changeButton.addEventListener('click', () => {
+     // Remove the blur effect when the button is clicked
+     blurredDiv.style.filter = 'none';
+
+ });
+
+
