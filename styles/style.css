@@ -7,6 +7,7 @@ body{
 #edit-pdf{
   font-family: Arial;
   font-size: 16px;
+  filter: blur(3px);
 }
 
 .header-style{
@@ -198,12 +199,8 @@ body{
  margin-left: 50px;
  margin-right: 50px;
   /* Adjust the blur intensity as needed */
-
-
  }
- #edit-pdf{
-  filter: blur(3px);
- }
+ 
  .div2::-webkit-scrollbar {
    width: 1px;
  }
