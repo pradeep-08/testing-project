@@ -681,7 +681,5 @@ document.querySelector('.currentDate').innerHTML = formattedDate;
 
 
 
-
-
         
 

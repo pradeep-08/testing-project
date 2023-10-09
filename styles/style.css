@@ -3,7 +3,19 @@ body{
 
    
 }
-
+.show-hide {
+  display: none;
+  margin-top: 20px;
+}
+.yesNo{
+  padding: 10px;
+}
+.data-clear {
+  display: none;
+}
+.data-clear1{
+  display: none;
+}
 #edit-pdf{
   font-family: Arial;
   font-size: 16px;
