@@ -12,7 +12,7 @@ body{
  transition: box-shadow 0.3s;
 }
 .preview-box:hover {
-       box-shadow: 1px 1px 10px black; /* Add shadow on hover */
+       box-shadow: 1px 1px 10px  #FFA500; /* Add shadow on hover */
    }
 
 .selecting-content{
@@ -50,27 +50,36 @@ body{
  margin-top: 10px;
  word-wrap: break-word;
  font-family: 'Montserrat', sans-serif;
+ color: black;
+
+ font-weight: bold;
 }
 .header-document{
- width: 500px;
+ width: 250px;
  padding-left: 50px;
  font-size: 15px;
  font-weight: 500;
  padding-top: 15px;
+ 
+}
+.heading-design{
+  
+    box-shadow:  1px 1px 3px rgba(138, 42, 42, 0.3) ;
+
+
 }
 .header-document1{
  color: grey;   
  margin-top: -10px;
  width: 700px;
  padding-left: 50px;
- font-size: 20px;
+ font-size: 15px;
 }
 .heading-top{
  background-color: #FFA500; /* Orange */
  text-align: center;
  padding-left: 15px;
  padding-right: 15px;
-
  border-radius: 5px;
 }
 

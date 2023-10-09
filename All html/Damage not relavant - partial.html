@@ -7,7 +7,20 @@
 <meta name=Generator content="Microsoft Word 15 (filtered)">
 <link rel="stylesheet" href="../styles/style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
+<style> .show-hide {
+   display: none;
+   margin-top: 20px;
+}
+.yesNo{
+   padding: 10px;
+}
+.data-clear {
+   display: none;
+}
+.data-clear1{
+   display: none;
+}
+</style>
 </head>
 
         <body lang=EN-US style='word-wrap:break-word'>
@@ -30,55 +43,49 @@
                         <div class="input-align-data">
                            <div class="input-align-data-div">
                               <span ><label class="input-text-element ">Claim Number</label></span>
-                              <input class="input-text icauseOfLoss"  id="textInput10" type="text" placeholder="Enter Service Name" required> 
+                              <input class="input-text icauseOfLoss"  id="textInput2" type="text" placeholder="Enter Claim Number" required> 
                            </div>   
                         </div>
                         <div class="input-align-data">
                            <div class="input-align-data-div">
                               <span><label class="input-text-element ">Policy Number</label></span>
-                              <input class="input-text vehicle-elements" id="textInput2"  placeholder="Enter Policy Number" required>
+                              <input class="input-text vehicle-elements" id="textInput3"  placeholder="Enter Policy Number" required>
                            </div>  
                         </div>
                         <div class="input-align-data">
                            <div class="input-align-data-div">
                               <span ><label class="input-text-element">Vehicle Regn No</label></span>
-                              <input class="input-text policy-elements" id="textInput3"  placeholder="Enter Policy Number" required> 
+                              <input class="input-text policy-elements" id="textInput4"  placeholder="Enter Vehicle Regn Number" required> 
                            </div>   
                         </div>
                         <div class="input-align-data">
                            <div class="input-align-data-div">
                               <span ><label class="input-text-element ">Date of Loss</label></span>
-                              <input class="input-text date-loss-element" id="textInput4"   placeholder="Enter Date of Loss" required> 
-                           </div>   
-                        </div>
-                        <div class="input-align-data">
-                           <div class="input-align-data-div">
-                              <span ><label class="input-text-element ">Reason</label></span>
-                              <input class="input-text reason-element" id="textInput5" type="text" placeholder="Enter Reason" required> 
-                           </div>   
-                        </div>
-                        <div class="input-align-data">
-                           <div class="input-align-data-div">
-                              <span ><label class="input-text-element ">Service Name</label></span>
-                              <input class="input-text service-name-element"  id="textInput6"type="text" placeholder="Enter Service Name" required> 
-                           </div>   
-                        </div>
-                        <div class="input-align-data">
-                           <div class="input-align-data-div">
-                              <span ><label class="input-text-element ">Inspected Date</label></span>
-                              <input class="input-text inspected-data"  id="textInput7" type="text" placeholder="Enter Service Name" required> 
+                              <input class="input-text date-loss-element" id="textInput5"   placeholder="Enter Date of Loss" required> 
                            </div>   
                         </div>
                         <div class="input-align-data">
                            <div class="input-align-data-div">
                               <span ><label class="input-text-element ">Cause Of Loss</label></span>
-                              <input class="input-text icauseOfLoss"  id="textInput9" type="text" placeholder="Enter Service Name" required> 
+                              <input class="input-text icauseOfLoss"  id="textInput6" type="text" placeholder="Enter Cause Of Loss" required> 
+                           </div>   
+                        </div>
+                        <div class="input-align-data">
+                           <div class="input-align-data-div">
+                              <span ><label class="input-text-element ">Inspected Date</label></span>
+                              <input class="input-text inspected-data"  id="textInput7" type="text" placeholder="Enter Inspected Date" required> 
+                           </div>   
+                        </div>
+                        <div class="input-align-data">
+                           <div class="input-align-data-div">
+                              <span ><label class="input-text-element ">Service Name</label></span>
+                              <input class="input-text service-name-element"  id="textInput8"type="text" placeholder="Enter Service Name" required> 
                            </div>   
                         </div>
                         <div class="input-align-data">
                            <div class="input-align-data-div">
                               <span ><label class="input-text-element ">Observed Damage</label></span>
-                              <input class="input-text observed-damage-element" id="textInput8"  type="text" placeholder="Enter Observed Damage Details" required> 
+                              <input class="input-text observed-damage-element" id="textInput9"  type="text" placeholder="Enter Observed Damage Details" required> 
                            </div>  
                            <div id="toastContainer">
                                <div class="toast" id="toastMessage">Document Updated</div>
@@ -87,9 +94,29 @@
                         </div> 
                         <div class="input-align-data">
                            <div class="input-align-data-div">
-                              <span ><label class="input-text-element ">Cause Of Loss</label></span>
-                              <input class="input-text icauseOfLoss"  id="textInput9" type="text" placeholder="Enter Service Name" required> 
+                              <span ><label class="input-text-element ">Reason</label></span>
+                              <input class="input-text reason-element" id="textInput10" type="text" placeholder="Enter Reason" required> 
                            </div>   
+                        </div>
+                       
+                       
+                      
+                        
+                        <div class="input-align-data">
+                           <div class="input-align-data-div">
+                              <span ><label class="input-text-element ">Clarification Letter/Mail</label></span>
+                              <div class="yesNo"><button class="upload-button1" id="yesButton">Yes</button>
+                                 <button class="upload-button1" id="noButton">No</button>
+                              </div>
+                              
+                           </div>   
+                        </div>
+                        <div class="input-align-data ">
+                           <div class="show-hide">
+                              <span ><label class="input-text-element  ">Date</label></span>
+                           <input class="input-text "  id="textInput11" type="text" placeholder="Enter Date" required> 
+                           </div>
+                           
                         </div>
                       
                   </div>
@@ -138,19 +165,19 @@
                   <p class=MsoNormal style='margin-bottom:12.0pt;text-align:justify;text-justify:
                   inter-ideograph;line-height:115%'><b><u><span style='font-family:"Arial",sans-serif;
                   color:black'>Sub:</span></u></b><b><span style='font-family:"Arial",sans-serif;
-                  color:black'> Our inability to admit liability under claim number<span id="Data-map-10"> XXXXXXXXX</span></span></b></p>
+                  color:black'> Our inability to admit liability under claim number <span id="Data-map-1"> XXXXXXXXX</span></span></b></p>
                   
                   <p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-justify:
                   inter-ideograph;line-height:115%'><span   style='font-family:"Arial",sans-serif;
-                  color:black'>                        Ref:     Policy No.                    :<span id="Data-map-1">XXXXXXXXX</span> </span></p>
+                  color:black'>                        Ref:     Policy No.                    :<span id="Data-map-2">XXXXXXXXX</span> </span></p>
                   
                   <p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-justify:
                   inter-ideograph;line-height:115%'><span style='font-family:"Arial",sans-serif;
-                  color:black'>                                    Vehicle Regn. No.       :<span id="Data-map-2">XXXXXXXXX</span></span></p>
+                  color:black'>                                    Vehicle Regn. No.       :<span id="Data-map-3">XXXXXXXXX</span></span></p>
                   
                   <p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-justify:
                   inter-ideograph;line-height:115%'><span style='font-family:"Arial",sans-serif;
-                  color:black'>                                    Date of Loss                :<span id="Data-map-3">XX-XX-XXXX</span> </span></p>
+                  color:black'>                                    Date of Loss                :<span id="Data-map-4">XX-XX-XXXX</span> </span></p>
                   
                   <p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-justify:
                   inter-ideograph;line-height:115%'><span style='font-family:"Arial",sans-serif;
@@ -177,7 +204,7 @@
                     background:white;padding:0in 5.4pt 0in 5.4pt;height:.05pt'>
                     <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
                     6.0pt;margin-left:0in;text-align:justify;text-justify:inter-ideograph;
-                    line-height:115%; margin-right:10px;padding-left:20px;  word-wrap: break-word;'>&nbsp;<span id="Data-map-8">XXXX-XXXXXX-XXXX</span></p>
+                    line-height:115%; margin-right:10px;padding-left:20px;  word-wrap: break-word;'>&nbsp;<span id="Data-map-5">XXXX-XXXXXX-XXXX</span></p>
                     </td>
                    </tr>
                   </table>
@@ -186,16 +213,15 @@
                   inter-ideograph;line-height:115%'><span style='font-size:14.0pt;line-height:
                   115%;font-family:"Arial",sans-serif;color:black'>&nbsp;</span></p>
                   
-                  <p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-justify:
-                  inter-ideograph;line-height:150%'><span style='font-family:"Arial",sans-serif;
-                  color:black'>Your vehicle was inspected on <span id="Data-map-7">XX-XX-XXXX</span>
-                  at M/s. <span id="Data-map-5">XXXX</span>. It has been
-                  observed that the damage on <span id="Data-map-6" >XXXX-XXXX-XXXXX</span>
-                  being claimed do not correlate with the cause of such damage as described in
-                  the claim form. Further, we have received a clarification letter from yourself
-                  dated <span>as Nil</span> regarding the correct cause
-                  of loss/damage, and the same does not explain the damage resultant on the
-                  vehicle.</span></p>
+                  <p class=MsoNormal style='margin-bottom:0in;text-align:justify;line-height:150%'><span style='font-family:"Arial",sans-serif;
+                  color:black'>Your vehicle was inspected on <span id="Data-map-6">XX-XX-XXXX</span>
+                  at M/s. <span id="Data-map-7">XXXX</span>.It has been
+                  observed that the damage on <span id="Data-map-8" >XXXX-XXXX-XXXXX</span>
+                  being claimed do not correlate<span style='margin-bottom:0in;text-align:justify;line-height:150%'><span style='font-family:"Arial",sans-serif;
+                     color:black'> with the cause of such damage as described in
+                     the claim form.</span><span class=data-clear style='margin-bottom:0in;text-align:justify;line-height:150%'><span style='font-family:"Arial",sans-serif;
+                     color:black'>Further, we have received a clarification letter from yourself
+                  dated <span id="Data-map-11">XXXXX</span>regarding the correct cause of loss/damage, and the same does not explain the damage resultant on the vehicle.</span></span></p>
                   
          
            
@@ -203,15 +229,15 @@
                   <p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-justify:
                   inter-ideograph;line-height:150%'><span style='font-family:"Arial",sans-serif;
                   color:black'>It was noticed from the physical inspection of your vehicle being
-                  claimed that </span><span id="Data-map-4"></span></p>
+                  claimed that </span><span id="Data-map-9">XXXXXXXXX</span></p>
                   
                   
                   <p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-justify:
                   inter-ideograph;line-height:150%'><span style='font-family:"Arial",sans-serif;
                   color:black'>As the cause of loss/ damage provided at the time of intimation of
-                  claim and in the subsequent clarification letter do not corroborate with the
+                  claim <span class="data-clear1">and in the subsequent clarification letter</span>do not corroborate with the
                   damage on the vehicle, we would like to inform you that <b><i>we are unable to
-                  admit liability to the damage on <span id="Data-map-9" >XXXX-XXXXXX-XXXX</span> under the subject claim</i></b>. Please note that our liability is
+                  admit liability to the damage on <span id="Data-map-10" >XXXX-XXXXXX-XXXX</span> under the subject claim</i></b>. Please note that our liability is
                   restricted to the relevant damage only.</span></p>
                   
                   <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
@@ -248,9 +274,29 @@
                   </div> 
                </div>
              </div>
-            
-             <script src="../script/index.js"></script>
+           
+    <script>
+      const yesButton = document.getElementById('yesButton');
+      const noButton = document.getElementById('noButton');
+      const inputContainer = document.querySelector('.show-hide');
+      const inputClearContainer = document.querySelector('.data-clear'); 
+      const inputClearContainerOne = document.querySelector('.data-clear1');
+      
+      yesButton.addEventListener('click', () => {
+          inputContainer.style.display = 'block';
+          inputClearContainer.style.display = 'inline-block';
+          inputClearContainerOne.style.display = 'inline-block';
+      });
+
+      noButton.addEventListener('click', () => {
+          inputContainer.style.display = 'none';
+          inputClearContainer.style.display = 'none';
+          inputClearContainerOne.style.display = 'none';
           
+      });
+  </script>
+             <script src="../script/index.js"></script>
+    <div></div>      
 </body>
 
 

@@ -129,8 +129,8 @@ function upload() {
        
        const inputData = [
            'textInput1',  'textInput2', 'textInput3', 'textInput4',
-           'textInput5', 'textInput6', 'textInput8', 'textInput7',
-           'textInput9' , 'textInput8' , 'textInput10' // Repeated field
+           'textInput5', 'textInput6' ,'textInput7' ,'textInput8' ,
+           'textInput9' , 'textInput10' ,'textInput9' ,'textInput11'   // Repeated field
        ];
     
        inputData.forEach((inputId, index) => {
@@ -672,5 +672,16 @@ document.querySelector('.currentDate').innerHTML = formattedDate;
      blurredDiv.style.filter = 'none';
 
  });
+ const year = new Date().getFullYear();
+        currentYear.textContent = year;
 
+        
+ 
+
+
+
+
+
+
+        
 
