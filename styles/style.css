@@ -1,5 +1,6 @@
 body{
    background-color:rgb(242,250,251);
+   font-family: Arial, Helvetica, sans-serif;
 
    
 }
@@ -148,6 +149,11 @@ body{
     border: 1px solid rgb(222,227,238);
     border-radius: 5px;
     box-shadow: 2px 2px 2px black ;
+    
+ }
+ .input-text {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
  }
  .text-area-input{
     resize: none;
@@ -222,6 +228,8 @@ body{
  width: 800px;
  margin-left: 50px;
  margin-right: 50px;
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 11px;
   /* Adjust the blur intensity as needed */
  }
  

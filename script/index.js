@@ -100,7 +100,7 @@ function upload() {
         const inputs = [];
    
         // Loop through each input box and get its value
-        for (let i = 1; i <= 10; i++) {
+        for (let i = 1; i <= 11; i++) {
             // Get the value of each input and remove any extra spaces
             const input = document.getElementById(`textInput${i}`);
             const inputValue = input.value.trim();
@@ -137,7 +137,7 @@ function upload() {
            const inputElement = document.getElementById(inputId);
    
            const dataMapElement = document.getElementById(`Data-map-${index}`);
-           const value = inputElement.value.replace(/\n/g, "<br>").replace(/ /g, "&nbsp;");
+           const value = inputElement.value;
            dataMapElement.innerHTML = value;
        });
    
