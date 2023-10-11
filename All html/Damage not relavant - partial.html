@@ -93,7 +93,7 @@
                         <div class="input-align-data">
                            <div class="input-align-data-div">
                               <span ><label class="input-text-element ">Clarification Letter/Mail</label></span>
-                              <div class="yesNo"><button class="upload-button1" id="yesButton">Yes</button>
+                              <div class="yesNo"><button style="background-color: green;" class="upload-button1" id="yesButton">Yes</button>
                                  <button class="upload-button1" id="noButton">No</button>
                               </div>
                               
@@ -273,11 +273,7 @@
    const inputClearContainer = document.querySelector('.data-clear'); 
    const inputClearContainerOne = document.querySelector('.data-clear1');
    
-   yesButton.addEventListener('click', () => {
-       inputContainer.style.display = 'block';
-       inputClearContainer.style.display = 'inline-block';
-       inputClearContainerOne.style.display = 'inline-block';
-   });
+  
 
    noButton.addEventListener('click', () => {
        inputContainer.style.display = 'none';
