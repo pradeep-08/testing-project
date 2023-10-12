@@ -46,7 +46,7 @@ function upload() {
     
 
     // Loop through each input box and get its value
-    for (let i = 1; i <= 9; i++) {
+    for (let i = 1; i <= 10; i++) {
         // Get the value of each input and remove any extra spaces
         const input = document.getElementById(`textInput${i}`);
         const inputValue = input.value.trim();
@@ -74,8 +74,9 @@ function upload() {
     }
 
    const inputData = [
-       'textInput1', 'textInput2', 'textInput3', 'textInput4',
-       'textInput5', 'textInput6', 'textInput7', 'textInput8' , 'textInput9'
+    'textInput1',  'textInput2', 'textInput3', 'textInput4',
+    'textInput5', 'textInput6' ,'textInput7' ,'textInput8' ,
+     , 'textInput9'  ,'textInput10'  
     // Repeated field
    ];
 
@@ -245,7 +246,7 @@ function upload() {
    
    const inputData = [
        'textInput1',  'textInput2', 'textInput3', 'textInput4',
-       'textInput5', ,'textInput5' ,'textInput6'  // Repeated field
+       'textInput5', 'textInput6' ,'textInput5'  // Repeated field
    ];
 
    inputData.forEach((inputId, index) => {

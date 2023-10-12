@@ -75,15 +75,16 @@
                               <span ><label class="input-text-element ">Observed Damage</label></span>
                               <input class="input-text observed-damage-element" id="textInput9"  type="text" placeholder="Enter Observed Damage Details" required> 
                            </div>  
-                           <div id="toastContainer">
-                               <div class="toast" id="toastMessage">Document Updated</div>
-                           </div>
+                          
                            
                         </div> 
                         <div class="input-align-data">
                            <div class="input-align-data-div">
                               <span ><label class="input-text-element ">Reason</label></span>
                               <input class="input-text reason-element"  id="textInput10" type="text" placeholder="Enter Reason" required> 
+                              <div id="toastContainer">
+                                 <div class="toast" id="toastMessage">Document Updated</div>
+                             </div>
                            </div>   
                         </div>
                        
@@ -208,20 +209,19 @@
                        It has been observed that the damage on
                        <span style="font-family:'Arial', sans-serif; color:black; text-align-last: justify; " id="Data-map-8">XXXX-XXXX-XXXXX</span><span style="display: inline;">
                         being claimed does not </span><span style=" word-wrap: break-word;">correlate with the cause of such damage as described in the claim form.</span> 
-                       <span style="font-family:'Arial', sans-serif; color:black; overflow-wrap: anywhere; ">
-                        
-                           <span class="data-clear" style="display: inline-block; text-align:justify">Further, we have received a clarification letter from yourself dated
-                           <span style="font-family:'Arial', sans-serif; color:black; display: inline;" id="Data-map-11">XXXXX</span> <span>regarding the correct cause of loss/damage, and the same does not explain the damage resultant on the vehicle.</span>
-                       </span>
+                           <span class="data-clear">Further, we have received a clarification letter from yourself dated
+                              <span style="font-family:'Arial', sans-serif; color:black; display: inline;" id="Data-map-11">XXXXX</span> regarding the correct cause of loss/damage, and the same does not explain 
+                              the damage resultant on the vehicle.</span>
                      </span>
                    </p>
                    
          
-           
+                   <p class=MsoNormal style='margin-bottom:0in;text-align:justify;
+                   line-height:150%'><span style='font-family:"Arial",sans-serif;
+                   color:black'>It was noticed from the <span>physical inspection of your vehicle being</span>
+                   claimed that</span> <span style="font-family:'Arial', sans-serif; color:black; display: inline;" id="Data-map-9">XXXXXXXX</span></p>
                   
-                   <p class=MsoNormal style='margin-bottom:0in; line-height:150%;  white-space: pre-line; text-align: start;'>It was noticed from the physical inspection of your vehicle being claimed that<span >
-                    <span  id="Data-map-9" style="font-family:'Arial', sans-serif; color:black;  text-align:justify; overflow-wrap: anywhere;"></span></span></span></p>
-                  
+                   
                   
                   <p class=MsoNormal style='margin-bottom:0in;text-align:justify;text-justify:
                   inter-ideograph;line-height:150%'><span style='font-family:"Arial",sans-serif;
@@ -274,7 +274,10 @@
    const inputClearContainerOne = document.querySelector('.data-clear1');
    
   
-
+   yesButton.addEventListener('click' , () =>{
+      inputContainer.style.display = 'block';
+      inputClearContainer.style.display = 'inline';
+      })
    noButton.addEventListener('click', () => {
        inputContainer.style.display = 'none';
        inputClearContainer.style.display = 'none';
