@@ -673,8 +673,7 @@ document.querySelector('.currentDate').innerHTML = formattedDate;
      blurredDiv.style.filter = 'none';
 
  });
- const year = new Date().getFullYear();
-        currentYear.textContent = year;
+
 
         
  
