@@ -20,6 +20,7 @@
 				   
 				   <div class="input-data-div">
 	 <h2 class="enter-detail" >Enter Your Details</h2>
+	 <div class="tittle-bar"><h4>Loss details not in policy period</h4></div>
 					  <div class="input-data-div-grid">
 							<div class="input-align-data">
 							   <div class="input-align-data-div">
@@ -32,7 +33,11 @@
 							<div class="input-align-data">
 								<div class="input-align-data-div">
 								   <span ><label class="input-text-element ">Claim Number</label></span>
-								   <input class="input-text icauseOfLoss"  id="textInput2" type="text" placeholder="Enter Claim Number" required> 
+								   <input class="input-text icauseOfLoss" maxlength="10"  id="textInput2" type="text" placeholder="Enter Claim Number" required>
+								   <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+									<button style="display: flex; align-items: center; justify-content: center;"  onclick="redirect()" class="link-button">Claim Docs<img  width="15" height="20" src="https://img.icons8.com/stickers/150/arrow.png" alt="arrow"/></button>
+									<button  style="display: flex; align-items: center; justify-content: center;" onclick="redirectTwo()" class="link-button">Survey Photos<img  width="15" height="20" src="https://img.icons8.com/stickers/150/arrow.png" alt="arrow"/></button>
+								</div> 
 								</div>   
 							 </div>
 							<div class="input-align-data">

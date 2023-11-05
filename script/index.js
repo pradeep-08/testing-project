@@ -680,6 +680,55 @@ document.querySelector('.currentDate').innerHTML = formattedDate;
  
 
 
+function redirect(){
+    const textLinks = document.getElementById('textInput2');
+    const textInput = textLinks.value;
+    const classLink = document.querySelector(".link-button");
+    const claimDocs = `https://icms.royalsundaram.in/DocumentsViewer/viewdocuments.do?do=getDocuments&Application=RSA_retrieve_ECMS&DataClassName=EcmsClaims&DC.ClaimNo=${textInput}&DC.SubRepositoryFolder=CLAIM_DOCUMENTS&P=PsessionIndexSet=false`
+    
+    if (textInput !== "") {
+        textLinks.classList.remove("invalid-input");
+        textLinks.classList.add("valid-input");
+        window.open(claimDocs, "_blank");
+    } else {
+        textLinks.classList.remove("valid-input");
+        textLinks.classList.add("invalid-input");
+        colorChanger();
+        showToast("Claim Number");
+    }
+
+    function colorChanger(){
+        document.getElementById('toastMessage').style.color =  "Black"
+        document.getElementById('toastMessage').style.backgroundColor =  "Yellow";
+    }
+
+}
+function redirectTwo(){
+    const textLinks = document.getElementById('textInput2');
+    const textInput = textLinks.value;
+    const classLink = document.querySelector(".link-button");
+    let surveyPhotoes = `https://icms.royalsundaram.in/DocumentsViewer/viewdocuments.do?do=getDocuments&Application=RSA_retrieve_ECMS&DataClassName=EcmsClaims&DC.ClaimNo=${textInput}&DC.SubRepositoryFolder=FINAL_SURVEY&P=PsessionIndexSet=false`
+    if (textInput !== "") {
+        textLinks.classList.remove("invalid-input");
+        textLinks.classList.add("valid-input");
+        window.open(surveyPhotoes, "_blank");
+        
+    } else {
+        textLinks.classList.remove("valid-input");
+        textLinks.classList.add("invalid-input");
+        colorChanger();
+        showToast("Claim Number");
+    }
+
+    function colorChanger(){
+        function colorChanger(){
+            document.getElementById('toastMessage').style.color =  "Black"
+            document.getElementById('toastMessage').style.backgroundColor =  "Yellow";
+        }
+    }
+
+}
+
 
 
         

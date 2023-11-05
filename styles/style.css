@@ -1,5 +1,5 @@
 body{
-   background-color:rgb(242,250,251);
+   background-color: #FBFBF8;;
    font-family: Arial, Helvetica, sans-serif;
 
    
@@ -64,7 +64,7 @@ body{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 50px;
-  background-color: white;
+  background-color: #FBFBF8;
 }
 
  @media screen and (max-width: 1025px) {
@@ -121,8 +121,11 @@ body{
    border-radius: 5px;
    border-bottom: 1px solid #2a64ad;
    text-align: center;
-   background-color: white;
-
+   background-color: #2C96D5;
+   color: white;
+   display: flex; align-items: center; 
+   justify-content: center; 
+   gap: 10px;
  }
  
  input:focus, textarea:focus, select:focus{
@@ -223,6 +226,10 @@ body{
    border-bottom: 1px solid rgb(222,227,238);
    padding: 5px;
    border-radius: 5px;
+   background-color: #DAEEF9;
+   color: black;
+   font-size: 12px;
+   font-weight: bold;
  }
  .pdf-content-div{
  width: 800px;
@@ -391,4 +398,33 @@ button.print-button:hover .print-icon::after {
   transition: height .2s .15s, border-width 0s .16s;
 }
 
- 
+.link-button{
+  background-color: white;
+  color: rgb(34, 36, 41);
+  height: 25px;
+  width: 140px;
+  border-radius: 5px;
+  border-color: rgb(0, 0, 0);
+  box-shadow: 1px 1px 2px black ;
+  font-family: "Poppins",sans-serif;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.link-button:hover{
+  background-color: #DAEEF9;
+  color: black;
+  font-weight: bolder;
+  font-size: 14px;
+  box-shadow: 1px 1px 2px rgb(114, 37, 37);
+}
+
+.tittle-bar{
+  color: white;
+  background-color: #44abe2;
+  height: 50px;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  gap: 10px;
+}

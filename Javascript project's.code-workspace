@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "../Javascript project's"
+		},
+		{
+			"path": "../../Downloads/pdf-converter-main"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../youtube-clone"
+		},
+		{
+			"path": "../devlopment BIn/Javascript project's"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "dev project v1.0"
+	}
+}
